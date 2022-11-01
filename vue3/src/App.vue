@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <h1>Bem vindo ao primeiro projeto!</h1>
-    <Usuario/>
+    <Usuario :nome="nome"/>
+    <button @click="entrar">Entrar</button>
   </div>
 </template>
 
@@ -18,7 +19,13 @@ export default {
         nome:'Sujeito programador'
       }
     },
-  }
+  methods: {
+    entrar() {
+        this.nome = 'Curso Vue JS'
+      }
+    }
+}
+  
 </script>
 
 <style>
