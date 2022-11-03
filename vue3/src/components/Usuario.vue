@@ -1,6 +1,7 @@
 <template>
   <div id="usuario">
-    <h2> Olá: {{nome}}</h2>
+    <h2> Olá Prop: {{nome}}</h2>
+    <button @click="curso">Novo Curso</button>
   </div>
 </template>
 
@@ -8,7 +9,16 @@
 export default {
   name: 'Usuario',
   props: {
-    nome: String,
+    nome: {
+      type:String,
+      required: false,
+    }
+  },
+  methods: {
+    curso() {
+      var nome = "Curso de VueJS";
+      this.$emit('cursoNovo', nome);
+    }
   }
 };
 
