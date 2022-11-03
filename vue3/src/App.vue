@@ -3,6 +3,7 @@
     <h1>Bem vindo ao primeiro projeto!</h1>
     <Usuario :nome="nome"/>
     <button @click="entrar">Entrar</button>
+
   </div>
 </template>
 
@@ -13,17 +14,19 @@ export default {
   name: 'App',
   components: {
     Usuario,
-},
+  },
   data() {
     return {
         nome:'Sujeito programador'
-      }
-    },
+    }
+  },
   methods: {
     entrar() {
-        this.nome = 'Curso Vue JS'
-      }
-    }
+      this.nome = "Mudou o nome"; 
+      alert("Mudou o nome");}
+    
+  }
+
 }
   
 </script>
