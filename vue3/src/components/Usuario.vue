@@ -7,7 +7,9 @@
 <script>
 export default {
   name: 'Usuario',
-  props: ['nome'],
+  props: {
+    nome: String,
+  }
 };
 
 </script>
